@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم الأندرويد والتقنية - Android & Tech World</title>
+    <!-- استيراد خط أنيق من جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3ddc84; /* لون أخضر الأندرويد الشهير */
+            --dark-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --gray-color: #888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* رأس الموقع (Header) */
+        header {
+            background: rgba(18, 18, 18, 0.95);
+            border-bottom: 2px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* القسم الرئيسي (Hero Section) */
+        .hero {
+            background: linear-gradient(135deg, #1a2e22 0%, #121212 100%);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* المحتوى والأقسام */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-right: 5px solid var(--primary-color);
+            padding-right: 10px;
+            color: #fff;
+        }
+
+        /* شبكة المقالات والألعاب (Grid) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(61, 220, 132, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: rgba(61, 220, 132, 0.15);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--gray-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #32b56e;
+        }
+
+        /* تذييل الصفحة (Footer) */
+        footer {
+            background-color: #0b0b0b;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #222;
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي -->
+    <header>
+        <div class="logo">Droid<span>Tech</span></div>
+        <nav>
+            <ul>
+                <li><a href="#news">الأخبار التقنية</a></li>
+                <li><a href="#apps">أفضل التطبيقات</a></li>
+                <li><a href="#games">ألعاب الأندرويد</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- الواجهة الترحيبية -->
+    <section class="hero">
+        <h1>مرحباً بك في عالم الأندرويد والأخبار التقنية</h1>
+        <p>مصدرك الأول لأحدث إصدارات التطبيقات، ألعاب الجوال الخارقة، وآخر مستجدات عالم التكنولوجيا الذكية.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- قسم الأخبار التقنية -->
+        <section id="news">
+            <h2 class="section-title">آخر الأخبار التقنية</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="تقنية">
+                    <div class="card-content">
+                        <span class="tag">أخبار تقنية</span>
+                        <h3 class="card-title">إطلاق نظام أندرويد الجديد بمميزات ذكاء اصطناعي</h3>
+                        <p class="card-desc">تعرف على أبرز التحديثات القادمة لهواتف الأندرويد وكيف ستغير تجربة الاستخدام اليومية.</p>
+                        <a href="#" class="btn">اقرأ المزيد</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="أمن سيبراني">
+                    <div class="card-content">
+                        <span class="tag">أمن المعلومات</span>
+                        <h3 class="card-title">نصائح هامة لحماية هاتفك من البرمجيات الخبيثة</h3>
+                        <p class="card-desc">خطوات بسيطة وفعالة يجب عليك اتباعها لضمان أمان بياناتك الشخصية وحساباتك.</p>
+                        <a href="#" class="btn">اقرأ المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم تطبيقات الأندرويد -->
+        <section id="apps">
+            <h2 class="section-title">أبرز تطبيقات الأندرويد</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="تطبيق تصميم">
+                    <div class="card-content">
+                        <span class="tag">تطبيقات</span>
+                        <h3 class="card-title">تطبيق خرافي لتعديل الصور بالذكاء الاصطناعي</h3>
+                        <p class="card-desc">أضف لمسات احترافية على صورك الشخصية بضغطة زر واحدة ودون خبرة سابقة.</p>
+                        <a href="#" class="btn">تحميل التطبيق</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="تطبيق إنتاجية">
+                    <div class="card-content">
+                        <span class="tag">إنتاجية</span>
+                        <h3 class="card-title">أفضل تطبيق لإدارة المهام وتنظيم الوقت</h3>
+                        <p class="card-desc">نظم يومك وزد من إنتاجيتك واجعل دراستك وعملك أكثر سهولة وترتيباً.</p>
+                        <a href="#" class="btn">تحميل التطبيق</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم ألعاب الأندرويد -->
+        <section id="games">
+            <h2 class="section-title">أحدث ألعاب الأندرويد</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="لعبة أندرويد">
+                    <div class="card-content">
+                        <span class="tag">ألعاب</span>
+                        <h3 class="card-title">لعبة مغامرات جديدة بجرافيك خارق للأنفاس</h3>
+                        <p class="card-desc">انطلق في رحلة ملحمية مليئة بالإثارة والتشويق مع أحدث ألعاب الهواتف الذكية.</p>
+                        <a href="#" class="btn">التحميل واللعب</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="لعبة سيارات">
+                    <div class="card-content">
+                        <span class="tag">ألعاب سباق</span>
+                        <h3 class="card-title">أقوى لعبة سباق سيارات واقعية لعام 2026</h3>
+                        <p class="card-desc">تنافس مع لاعبين من جميع أنحاء العالم في أقوى حلبات السرعة والتحدي.</p>
+                        <a href="#" class="btn">التحميل واللعب</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- التذييل -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - عالم الأندرويد والتقنية (DroidTech)</p>
+    </footer>
+
+</body>
+</html>
